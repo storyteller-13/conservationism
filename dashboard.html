@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Conservationism</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="stripe-bg">
+  <nav id="nav" class="scrolled">
+    <a href="index.html" class="logo">Conservationism</a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#pillars">Principles</a>
+      <a href="essays.html">Essays</a>
+      <a href="https://donationvonsteinkirchcom.vercel.app/#conservationism" target="_blank" rel="noopener noreferrer">Donate</a>
+    </div>
+  </nav>
+
+  <main class="dashboard-page">
+    <header class="dashboard-hero">
+      <h1>Movement Dashboard</h1>
+      <p>Track impact. Take action. Conserve what matters.</p>
+    </header>
+
+    <div class="dashboard-grid">
+      <div class="dash-card">
+        <h3>Chapters</h3>
+        <div class="value">47</div>
+        <p>Active local chapters nationwide</p>
+      </div>
+      <div class="dash-card">
+        <h3>Members</h3>
+        <div class="value">12,847</div>
+        <p>Registered supporters</p>
+      </div>
+      <div class="dash-card">
+        <h3>Events This Month</h3>
+        <div class="value">23</div>
+        <p>Meetups, town halls, actions</p>
+      </div>
+      <div class="dash-card">
+        <h3>Petitions Live</h3>
+        <div class="value">5</div>
+        <p>Active campaigns</p>
+      </div>
+
+      <div class="dash-actions">
+        <h3>Take Action</h3>
+        <div class="action-list">
+          <a href="#" class="btn btn-primary">Find Your Chapter</a>
+          <a href="#" class="btn btn-outline">Sign a Petition</a>
+          <a href="#" class="btn btn-outline">Upcoming Events</a>
+          <a href="#" class="btn btn-outline">Volunteer</a>
+          <a href="#" class="btn btn-outline">Donate</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <a href="index.html#pillars">Principles</a>
+          <a href="essays.html">Essays</a>
+          <a href="https://donationvonsteinkirchcom.vercel.app/#conservationism" target="_blank" rel="noopener noreferrer">Donate</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Conservationism. Land. Community. Courage. Continuity.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+</body>
+</html>

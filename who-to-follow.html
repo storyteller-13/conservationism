@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who to Follow — Conservationism</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="stripe-bg">
+  <nav id="nav" class="scrolled">
+    <a href="index.html" class="logo">Conservationism</a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#pillars">Principles</a>
+      <a href="essays.html">Essays</a>
+      <a href="who-to-follow.html">Who to Follow</a>
+      <a href="about.html">About</a>
+      <a href="https://donationvonsteinkirchcom.vercel.app/#conservationism" target="_blank" rel="noopener noreferrer">Donate</a>
+    </div>
+  </nav>
+
+  <main class="dashboard-page">
+    <header class="dashboard-hero">
+      <h1>Who to Follow</h1>
+      <p>(work in progress)</p>
+    </header>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <a href="index.html#pillars">Principles</a>
+        <a href="essays.html">Essays</a>
+        <a href="who-to-follow.html">Who to Follow</a>
+        <a href="about.html">About</a>
+        <a href="https://donationvonsteinkirchcom.vercel.app/#conservationism" target="_blank" rel="noopener noreferrer">Donate</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© Conservationism. Land. Community. Courage. Continuity.</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+</body>
+</html>
