@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Conservationism</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="stripe-bg">
+  <nav id="nav">
+    <a href="index.html" class="logo">Conservationism</a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#pillars">Principles</a>
+      <a href="essays.html">Essays</a>
+      <a href="who-to-follow.html">Who to Follow</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero hero-404">
+      <h1>404</h1>
+      <p class="tagline">Page not found</p>
+      <p class="mission">
+        This page doesn’t exist or has been moved. Head back to the home page to find your way.
+      </p>
+      <div class="cta-group">
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+      </div>
+    </header>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <a href="index.html#pillars">Principles</a>
+          <a href="essays.html">Essays</a>
+          <a href="who-to-follow.html">Who to Follow</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Conservationism. Land. Community. Courage. Continuity.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+</body>
+</html>
