@@ -1,0 +1,11 @@
+# Install: pip install pre-commit && pre-commit install
+# Run manually: pre-commit run --all-files
+repos:
+  - repo: local
+    hooks:
+      - id: lint
+        name: Lint (markdown, CSS, HTML)
+        entry: npm run lint
+        language: node
+        types_or: [markdown, css, html]
+        pass_filenames: false

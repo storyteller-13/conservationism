@@ -1,0 +1,16 @@
+{
+  "name": "conservationism",
+  "private": true,
+  "scripts": {
+    "lint": "npm run lint:md && npm run lint:css && npm run lint:html",
+    "lint:md": "npx markdownlint README.md courses/",
+    "lint:css": "npx stylelint 'styles/**/*.css'",
+    "lint:html": "npx html-validate 'index.html' 'pages/**/*.html'"
+  },
+  "devDependencies": {
+    "html-validate": "^8.17.0",
+    "markdownlint-cli": "^0.38.0",
+    "stylelint": "^16.6.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}

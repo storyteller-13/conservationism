@@ -764,8 +764,23 @@ footer::before {
   text-shadow: 0 0 12px rgba(255, 8, 68, 0.3);
 }
 
-.course-card__body h4:first-of-type {
+.course-card__body h4:first-of-type,
+.course-card__body h2:first-of-type {
   margin-top: 0;
+}
+
+.course-card__body h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--red-neon);
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card__error {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
 }
 
 .course-card__body p,
