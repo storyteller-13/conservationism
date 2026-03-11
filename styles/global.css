@@ -29,6 +29,7 @@
 html {
   scroll-behavior: smooth;
   background: var(--black);
+  overflow-x: hidden;
 }
 
 body {
@@ -37,6 +38,7 @@ body {
   color: var(--white);
   line-height: 1.4;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Stripes background accent — neon tint */
@@ -126,12 +128,13 @@ nav .cta-nav:hover {
 /* Hero */
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem clamp(1rem, 5vw, 2rem);
   position: relative;
   background: 
     linear-gradient(135deg, var(--blue) 0%, var(--black) 40%, var(--black) 60%, var(--red-dark) 100%);
@@ -148,7 +151,7 @@ nav .cta-nav:hover {
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-size: min(clamp(1.5rem, 7vw, 6rem), calc(100vw / 11));
   text-transform: uppercase;
   letter-spacing: 0.12em;
   line-height: 1.1;
@@ -161,6 +164,9 @@ nav .cta-nav:hover {
     0 0 70px rgba(0, 102, 255, 0.5),
     0 0 100px rgba(0, 102, 255, 0.25);
   position: relative;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .hero h1::after {
@@ -169,7 +175,7 @@ nav .cta-nav:hover {
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
-  width: 140px;
+  width: min(140px, 60vw);
   height: 5px;
   background: linear-gradient(90deg, var(--red-neon), var(--blue-neon));
   box-shadow: var(--glow-red), var(--glow-blue);
@@ -178,13 +184,14 @@ nav .cta-nav:hover {
 
 .hero .tagline {
   font-family: "Ubuntu", sans-serif;
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  letter-spacing: 0.3em;
+  font-size: clamp(0.875rem, 2.5vw, 1.4rem);
+  letter-spacing: min(0.3em, 4vw);
   text-transform: uppercase;
   color: var(--off-white);
   margin-bottom: 2rem;
   opacity: 0.95;
   text-shadow: 0 0 15px rgba(255, 8, 68, 0.4), 0 0 35px rgba(0, 102, 255, 0.3);
+  max-width: 100%;
 }
 
 .hero .mission {
@@ -208,11 +215,14 @@ nav .cta-nav:hover {
 /* 404 page */
 .hero-404 {
   min-height: 70vh;
+  min-height: 70dvh;
 }
 
 .hero-404 h1 {
-  font-size: clamp(4rem, 18vw, 10rem);
+  font-size: min(clamp(2.5rem, 18vw, 10rem), calc(100vw / 2.8));
   letter-spacing: 0.05em;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .btn {
@@ -277,6 +287,8 @@ nav .cta-nav:hover {
   text-shadow: var(--glow-red);
   line-height: 1;
   margin-bottom: 0.5rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .error-message {
@@ -306,12 +318,15 @@ section:nth-child(even) {
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.35rem, 5vw, 3rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   text-align: center;
   margin-bottom: 3rem;
   color: var(--white);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .section-title span {
@@ -380,10 +395,12 @@ section:nth-child(even) {
 }
 
 .pillar h3 {
-  font-size: 1.4rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   letter-spacing: 0.1em;
   margin-bottom: 0.75rem;
   color: var(--white);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .pillar p {
@@ -519,10 +536,12 @@ footer::before {
 }
 
 .dashboard-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.35rem, 5vw, 3rem);
   letter-spacing: 0.12em;
   margin-bottom: 0.5rem;
   text-shadow: 0 0 25px rgba(255, 8, 68, 0.3), 0 0 50px rgba(0, 102, 255, 0.2);
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .dashboard-hero p {
@@ -811,15 +830,172 @@ footer::before {
   font-weight: 500;
 }
 
-/* Responsive */
+/* Responsive — titles fit viewport, mobile-first tweaks */
 @media (max-width: 768px) {
-  nav .links {
-    display: none;
+  nav {
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
   }
+
+  nav .logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  nav .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+    width: 100%;
+    order: 2;
+  }
+
+  nav .links a {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.4rem;
+    letter-spacing: 0.08em;
+  }
+
   .hero {
+    padding: 3rem 1rem 2rem;
     border-radius: 0 0 var(--radius) var(--radius);
   }
+
+  .hero .mission {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero .cta-group .btn {
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .pillars {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pillar {
+    padding: 1.25rem;
+  }
+
+  .pillar h3 {
+    font-size: 1.15rem;
+  }
+
   footer {
+    padding: 3rem 1rem 1.5rem;
     border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .footer-inner {
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-col a {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    padding-top: 1.5rem;
+  }
+
+  .error-page {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .error-code {
+    font-size: min(clamp(3rem, 20vw, 12rem), calc(100vw / 3));
+  }
+}
+
+/* Dashboard / inner pages mobile */
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding-top: 60px;
+  }
+
+  .dashboard-hero {
+    padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dashboard-hero p {
+    font-size: 0.95rem;
+  }
+
+  .dashboard-grid {
+    padding: 0 1rem 3rem;
+    grid-template-columns: 1fr;
+  }
+
+  .dash-actions {
+    padding: 1.5rem;
+  }
+
+  .dash-actions .action-list {
+    flex-direction: column;
+  }
+
+  .dash-actions .btn {
+    min-height: 44px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .courses-section {
+    padding: 0 1rem 3rem;
+  }
+
+  .course-card__header {
+    padding: 1rem;
+    min-height: 64px;
+    gap: 0.75rem;
+  }
+
+  .course-card__num {
+    width: 36px;
+    height: 36px;
+    font-size: 0.75rem;
+  }
+
+  .course-card__title {
+    font-size: 1rem;
+  }
+
+  .course-card__body {
+    padding: 1rem;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/* Very small viewports — ensure title never overflows */
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: min(1.35rem, calc(100vw / 10));
+  }
+
+  .hero .tagline {
+    letter-spacing: 0.15em;
+  }
+
+  nav .links a {
+    font-size: 0.7rem;
   }
 }
