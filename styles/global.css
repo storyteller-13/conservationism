@@ -538,7 +538,7 @@ footer::before {
 .dashboard-hero h1 {
   font-size: clamp(1.35rem, 5vw, 3rem);
   letter-spacing: 0.12em;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 0;
   text-shadow: 0 0 25px rgba(255, 8, 68, 0.3), 0 0 50px rgba(0, 102, 255, 0.2);
   overflow-wrap: break-word;
   max-width: 100%;
@@ -546,8 +546,10 @@ footer::before {
 
 .dashboard-hero p {
   font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
   letter-spacing: 0.1em;
   color: rgba(255,255,255,0.8);
+  margin: 0;
 }
 
 .dashboard-grid {
@@ -830,6 +832,119 @@ footer::before {
   font-weight: 500;
 }
 
+/* About page — centered card, not full width (hero uses same .dashboard-hero as other pages) */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
+}
+
+.about-page .dashboard-hero {
+  flex-shrink: 0;
+}
+
+.about-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 6rem;
+  min-height: 0;
+}
+
+/* Central card — constrained width, elevated look */
+.about-card {
+  max-width: 32rem;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, var(--red-neon), var(--blue-neon), var(--red-neon));
+  background-size: 200% 200%;
+  border-radius: calc(var(--radius-lg) + 4px);
+  opacity: 0.35;
+  filter: blur(12px);
+  z-index: -1;
+  animation: about-glow 8s ease-in-out infinite;
+}
+
+@keyframes about-glow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.about-card__inner {
+  font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.95;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem 2.75rem;
+  background: linear-gradient(165deg, rgba(22, 25, 32, 0.98) 0%, rgba(12, 14, 18, 0.99) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 0 1px rgba(0, 102, 255, 0.2),
+    0 4px 0 0 var(--red-neon),
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 24px 64px rgba(0, 0, 0, 0.35),
+    0 0 60px rgba(255, 8, 68, 0.08),
+    0 0 100px rgba(0, 102, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+.about-card__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red-neon) 0%, var(--blue-neon) 50%, var(--red-neon) 100%);
+  background-size: 200% 100%;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: 0 0 18px rgba(255, 8, 68, 0.5), 0 0 18px rgba(0, 102, 255, 0.35);
+  animation: about-line 6s ease-in-out infinite;
+}
+
+@keyframes about-line {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.about-card__lead {
+  margin: 0 0 1.35rem;
+  padding-bottom: 1.35rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-card__inner p:last-child {
+  margin: 0;
+}
+
+.about-card__inner a {
+  color: var(--blue-neon);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 102, 255, 0.45);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s, text-shadow 0.2s;
+}
+
+.about-card__inner a:hover {
+  color: var(--red-neon);
+  border-bottom-color: var(--red-neon);
+  text-shadow: 0 0 18px rgba(255, 8, 68, 0.5);
+}
+
 /* Responsive — titles fit viewport, mobile-first tweaks */
 @media (max-width: 768px) {
   nav {
@@ -977,6 +1092,16 @@ footer::before {
 
   .course-card__body {
     padding: 1rem;
+  }
+
+  .about-content {
+    padding: 1.5rem 2rem 2rem;
+  }
+
+  .about-card__inner {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    padding: 2rem 1.5rem;
   }
 
   .btn {
