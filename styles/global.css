@@ -538,7 +538,7 @@ footer::before {
 .dashboard-hero h1 {
   font-size: clamp(1.35rem, 5vw, 3rem);
   letter-spacing: 0.12em;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 0;
   text-shadow: 0 0 25px rgba(255, 8, 68, 0.3), 0 0 50px rgba(0, 102, 255, 0.2);
   overflow-wrap: break-word;
   max-width: 100%;
@@ -546,8 +546,10 @@ footer::before {
 
 .dashboard-hero p {
   font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
   letter-spacing: 0.1em;
   color: rgba(255,255,255,0.8);
+  margin: 0;
 }
 
 .dashboard-grid {
