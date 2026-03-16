@@ -832,16 +832,14 @@ footer::before {
   font-weight: 500;
 }
 
-/* About page — centered card, not full width */
+/* About page — centered card, not full width (hero uses same .dashboard-hero as other pages) */
 .about-page {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 80px);
-  padding-top: 0;
 }
 
 .about-page .dashboard-hero {
-  margin-bottom: 0;
   flex-shrink: 0;
 }
 
