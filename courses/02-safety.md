@@ -30,5 +30,3 @@ How you store guns when not in use depends on your situation: kids in the house,
 - **Safes and lockboxes** — A fire-rated safe or a steel lockbox secures guns from unauthorized use and from theft. Biometric or keypad lockboxes can allow fast access for a bedside gun while still keeping it away from others.
 - **Ammunition** — Storing ammo separately from the gun adds another layer of safety, especially with children in the home. It does slow down readiness for self-defense, so this is a tradeoff you make for your own context.
 - **Legal obligations** — Some states require that firearms be stored locked or unloaded when not in the owner's immediate control. Know your local laws.
-
-Safety isn't a single checklist; it's a habit. Build it from day one, and you'll be the person others want at the range and at home.
