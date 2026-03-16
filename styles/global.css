@@ -838,31 +838,9 @@ footer::before {
   padding-top: 0;
 }
 
-.about-page .about-hero {
-  width: 100%;
+.about-page .dashboard-hero {
   margin-bottom: 0;
   flex-shrink: 0;
-  position: relative;
-  text-align: center;
-  padding: 3.5rem 2rem 2.5rem;
-}
-
-.about-hero-accent {
-  display: block;
-  width: 48px;
-  height: 4px;
-  margin: 0 auto 1.25rem;
-  background: linear-gradient(90deg, var(--red-neon), var(--blue-neon));
-  border-radius: 999px;
-  box-shadow: 0 0 16px rgba(255, 8, 68, 0.5), 0 0 16px rgba(0, 102, 255, 0.4);
-}
-
-.about-hero-sub {
-  font-size: 0.85rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
-  margin-top: 0.35rem;
 }
 
 .about-content {
@@ -1124,20 +1102,6 @@ footer::before {
     font-size: 1.1rem;
     line-height: 1.9;
     padding: 2rem 1.5rem;
-  }
-
-  .about-hero {
-    padding: 2.5rem 1rem 2rem;
-  }
-
-  .about-hero-accent {
-    width: 40px;
-    margin-bottom: 1rem;
-  }
-
-  .about-hero-sub {
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
   }
 
   .btn {
