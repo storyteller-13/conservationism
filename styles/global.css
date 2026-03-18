@@ -926,6 +926,21 @@ footer::before {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.about-youtube-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-youtube-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .about-card__inner p:last-child {
   margin: 0;
 }
