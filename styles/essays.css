@@ -1,45 +1,50 @@
 .essays-page .dashboard-grid {
   max-width: 1200px;
-  padding: 2rem 3rem 3rem;
-  justify-items: start;
-  gap: 9rem;
+  padding: 1rem 2rem 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
-.essays-page .dash-card {
+.essays-page .essays-card {
   width: 100%;
-  max-width: none;
-  padding: 1.25rem 1.35rem;
-  margin-left: 0;
+  padding: 1.4rem 1.35rem 1.2rem;
   border-radius: 18px;
+  border-left: 2px solid rgba(255, 8, 68, 0.7);
+  border-top: 1px solid rgba(0, 102, 255, 0.35);
+  background: linear-gradient(165deg, rgba(20, 20, 22, 0.97) 0%, rgba(13, 16, 24, 0.98) 100%);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.essays-page .essays-card:hover {
+  transform: translateY(-4px);
+  border-left-color: var(--red-neon);
+  border-top-color: rgba(0, 102, 255, 0.75);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.42), 0 0 18px rgba(255, 8, 68, 0.2);
 }
 
 .essays-card__title {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  margin-bottom: 0.65rem;
   color: var(--red-neon);
-  text-shadow: var(--glow-red);
+  text-shadow: 0 0 10px rgba(255, 8, 68, 0.35);
   font-weight: 700;
 }
 
 .essays-card__lead {
   font-family: "Ubuntu", sans-serif;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.7;
-  margin: 0 0 1.25rem;
-  font-weight: 300;
-}
-
-.essays-card__lead--lady {
-  /* Extra breathing room under the Lady title */
-  margin-top: 0.5rem;
-}
-
-.essays-card__lead--gentleman {
-  /* Extra breathing room under the Gentleman title */
-  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+  margin: 0 0 1rem;
+  font-weight: 400;
+  flex-grow: 1;
 }
 
 .essays-card__btn {
@@ -47,19 +52,18 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: none;
-  margin-top: 0;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
-  .essays-page .dash-card {
+  .essays-page .essays-card {
     max-width: 100%;
-    padding: 1.15rem 1.1rem;
+    padding: 1.2rem 1.1rem;
   }
 
   .essays-page .dashboard-grid {
-    padding-top: 1.25rem;
-    gap: 2.5rem;
+    padding: 0.5rem 1rem 2.5rem;
+    gap: 1rem;
   }
 }
 
