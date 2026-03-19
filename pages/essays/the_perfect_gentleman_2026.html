@@ -326,6 +326,23 @@
     .pull-quote { padding-left: 24px; font-size: 20px; }
   }
 
+  @media (max-width: 480px) {
+    .cover { min-height: 72vh; padding: 34px 16px; }
+    .cover-border { inset: 12px; }
+    .cover-border::before { inset: 5px; }
+    .cover-ornament { font-size: 10px; letter-spacing: 0.28em; margin-bottom: 26px; }
+    .cover-subtitle { font-size: 11px; letter-spacing: 0.2em; line-height: 1.7; }
+    .cover-year { margin-top: 34px; font-size: 24px; letter-spacing: 0.2em; }
+    .page { padding: 44px 16px; }
+    .chapter { margin: 58px 0 36px; }
+    .book-shell h2 { font-size: 12px; letter-spacing: 0.24em; margin: 42px 0 14px; }
+    .book-shell p.lead { font-size: 20px; line-height: 1.6; }
+    .pull-quote { margin: 36px 0; padding-left: 16px; font-size: 18px; line-height: 1.45; }
+    .rule-list li { grid-template-columns: 22px 1fr; gap: 12px; }
+    .colophon { padding: 42px 16px; font-size: 10px; letter-spacing: 0.18em; }
+    .colophon span { font-size: 12px; letter-spacing: 0.14em; }
+  }
+
   /* Print */
   @media print {
     .cover { min-height: auto; padding: 40px; }
