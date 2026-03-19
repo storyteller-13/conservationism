@@ -12,17 +12,18 @@
   <style>
     /* Page-scoped tweaks for a cleaner, smaller essays box */
     .essays-page .dashboard-grid {
-      max-width: 720px;
-      padding: 0 1rem 3rem;
-      grid-template-columns: 1fr;
+      max-width: 1200px;
+      padding: 0 3rem 3rem;
       justify-items: start;
+      gap: 8rem;
     }
 
     .essays-page .dash-card {
       width: 100%;
-      max-width: 560px;
+      max-width: none;
       padding: 1.25rem 1.35rem;
       margin-left: 0;
+      border-radius: 18px;
     }
 
     .essays-card__title {
@@ -49,8 +50,8 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      max-width: 340px;
-      margin-top: 0.25rem;
+      max-width: none;
+      margin-top: 0;
     }
 
     @media (max-width: 768px) {
@@ -83,11 +84,23 @@
       <div class="dash-card">
         <div class="essays-card__title">The Perfect Gentleman (2026)</div>
         <p class="essays-card__lead">
-          A modern manual on being a gentleman — rooted in character, presence, and conduct.
+          A modern manual on being a gentleman — rooted in character, and conduct.
         </p>
 
         <a
           href="essays/the_perfect_gentleman_2026.html"
+          class="btn btn-primary essays-card__btn"
+        >Read</a>
+      </div>
+
+      <div class="dash-card">
+        <div class="essays-card__title">The Perfect Lady (2026)</div>
+        <p class="essays-card__lead">
+          A modern manual on being a lady — rooted in character, grace, and intellect.
+        </p>
+
+        <a
+          href="essays/the_perfect_lady_2026.html"
           class="btn btn-primary essays-card__btn"
         >Read</a>
       </div>
