@@ -9,58 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles/global.css" />
-  <style>
-    /* Page-scoped tweaks for a cleaner, smaller essays box */
-    .essays-page .dashboard-grid {
-      max-width: 1200px;
-      padding: 0 3rem 3rem;
-      justify-items: start;
-      gap: 8rem;
-    }
-
-    .essays-page .dash-card {
-      width: 100%;
-      max-width: none;
-      padding: 1.25rem 1.35rem;
-      margin-left: 0;
-      border-radius: 18px;
-    }
-
-    .essays-card__title {
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      margin-bottom: 0.5rem;
-      color: var(--red-neon);
-      text-shadow: var(--glow-red);
-      font-weight: 700;
-    }
-
-    .essays-card__lead {
-      font-family: "Ubuntu", sans-serif;
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.75);
-      line-height: 1.7;
-      margin: 0 0 1.25rem;
-      font-weight: 300;
-    }
-
-    .essays-card__btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: none;
-      margin-top: 0;
-    }
-
-    @media (max-width: 768px) {
-      .essays-page .dash-card {
-        max-width: 100%;
-        padding: 1.15rem 1.1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../styles/essays.css" />
 </head>
 <body class="stripe-bg">
   <nav id="nav" class="scrolled">
@@ -82,9 +31,9 @@
 
     <div class="dashboard-grid">
       <div class="dash-card">
-        <div class="essays-card__title">The Perfect Gentleman (2026)</div>
-        <p class="essays-card__lead">
-          A modern manual on being a gentleman — rooted in character, and conduct.
+        <div class="essays-card__title">The Perfect Gentleman of 2026</div>
+        <p class="essays-card__lead essays-card__lead--gentleman">
+          A modern manual rooted in character, and conduct.
         </p>
 
         <a
@@ -94,9 +43,9 @@
       </div>
 
       <div class="dash-card">
-        <div class="essays-card__title">The Perfect Lady (2026)</div>
-        <p class="essays-card__lead">
-          A modern manual on being a lady — rooted in character, grace, and intellect.
+        <div class="essays-card__title">The Perfect Lady of 2026</div>
+        <p class="essays-card__lead essays-card__lead--lady">
+          A modern manual rooted in character, grace, and intellect.
         </p>
 
         <a

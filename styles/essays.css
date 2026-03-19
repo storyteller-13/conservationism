@@ -1,0 +1,65 @@
+.essays-page .dashboard-grid {
+  max-width: 1200px;
+  padding: 2rem 3rem 3rem;
+  justify-items: start;
+  gap: 9rem;
+}
+
+.essays-page .dash-card {
+  width: 100%;
+  max-width: none;
+  padding: 1.25rem 1.35rem;
+  margin-left: 0;
+  border-radius: 18px;
+}
+
+.essays-card__title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  color: var(--red-neon);
+  text-shadow: var(--glow-red);
+  font-weight: 700;
+}
+
+.essays-card__lead {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin: 0 0 1.25rem;
+  font-weight: 300;
+}
+
+.essays-card__lead--lady {
+  /* Extra breathing room under the Lady title */
+  margin-top: 0.5rem;
+}
+
+.essays-card__lead--gentleman {
+  /* Extra breathing room under the Gentleman title */
+  margin-top: 0.5rem;
+}
+
+.essays-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .essays-page .dash-card {
+    max-width: 100%;
+    padding: 1.15rem 1.1rem;
+  }
+
+  .essays-page .dashboard-grid {
+    padding-top: 1.25rem;
+    gap: 2.5rem;
+  }
+}
+
