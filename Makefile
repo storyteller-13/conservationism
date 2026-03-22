@@ -1,7 +1,10 @@
-.PHONY: help serve open clean
+.PHONY: help serve open clean lint
 
 PORT ?= 8050
 URL  := http://localhost:$(PORT)
+
+lint:
+	npm run lint
 
 server:
 	python3 -m http.server $(PORT)
