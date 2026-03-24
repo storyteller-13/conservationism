@@ -1,9 +1,33 @@
 .essays-page .dashboard-grid {
   max-width: 1200px;
   padding: 1rem 2rem 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
   gap: 1.5rem;
   align-items: stretch;
+}
+
+.essays-section {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 0 0.75rem;
+  background: transparent;
+}
+
+.essays-page .essays-section:nth-child(even),
+.essays-page .essays-section:nth-child(odd) {
+  background: transparent;
+}
+
+.essays-section + .essays-section {
+  margin-top: 1.5rem;
+}
+
+.essays-section__title {
+  margin: 0 2rem 0.65rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .essays-page .essays-card {
@@ -56,6 +80,15 @@
 }
 
 @media (max-width: 768px) {
+  .essays-section {
+    padding: 0 0.35rem;
+  }
+
+  .essays-section__title {
+    margin: 0 1rem 0.5rem;
+    font-size: 1rem;
+  }
+
   .essays-page .essays-card {
     max-width: 100%;
     padding: 1.2rem 1.1rem;
@@ -64,6 +97,12 @@
   .essays-page .dashboard-grid {
     padding: 0.5rem 1rem 2.5rem;
     gap: 1rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .essays-page .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
   }
 }
 
